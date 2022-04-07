@@ -1,0 +1,30 @@
+
+main{
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 90%;
+}
+
+.time{
+    float: right;
+}
+
+.container h1{
+    display: block;
+}
+
+#startbtn{
+    display: block;
+}
+.textDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
