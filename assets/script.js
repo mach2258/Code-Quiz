@@ -2,6 +2,19 @@
 // Selects element by class
 var timeEl = document.querySelector(".time");
 
+var containerEl = document.querySelector(".container");
+
+var mainQEL = document.querySelector(".mainQ");
+
+var option1El = document.querySelector(".option1");
+
+var option2El = document.querySelector(".option2");
+
+var option3El = document.querySelector(".option3");
+
+var option4El = document.querySelector(".option4");
+
+
 var startBtn = document.getElementById("startbtn");
 console.log(startBtn)
 // Selects element by id
@@ -46,10 +59,10 @@ var questions = [
     },
     correctAnswer: 'a'
   }
-]
+];
 
 
-var secondsLeft = 90;
+var secondsLeft = 91;
 
 function setTime() {
   // Sets interval in variable
@@ -64,15 +77,20 @@ function setTime() {
     }
 
     }, 1000);
-}
+};
 
-function question(){
 
-}
 
-startBtn.addEventListener("click", setTime) 
+startBtn.addEventListener("click", startGame) 
 
 function startGame(){
   setTime()
-  startGame()
-}
+  containerEl.setAttribute("class", "hidden")
+  mainQEL.setAttribute("class", "reveal")
+  mainQEL.textContent = questions[0].question;
+  option1El.textContent = questions[0].answers.a;
+  option2El.textContent = questions[0].answers.b;
+  option3El.textContent = questions[0].answers.c;
+  option4El.textContent = questions[0].answers.d;
+  
+};
