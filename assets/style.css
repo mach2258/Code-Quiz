@@ -30,7 +30,7 @@ main{
 }
 
 .hidden{
-    display: none;
+    display: none !important;
 }
 
 .reveal{
@@ -43,7 +43,7 @@ main{
     align-items:flex-start;
 }
 
-.Qcontainer{
+.Qcontainer, .highscore{
     display: flex;
     justify-content: center;
     align-items: center;
